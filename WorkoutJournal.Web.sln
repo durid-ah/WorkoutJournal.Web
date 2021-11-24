@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutJournal.Web", "WorkoutJournal.Web\WorkoutJournal.Web.csproj", "{FE3B20C5-4FFC-47C3-A8C1-ED4BD36B80F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutJournal.Data", "WorkoutJournal.Data\WorkoutJournal.Data.csproj", "{6C68A942-9EF3-4536-AA4D-8068E88A5705}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3B20C5-4FFC-47C3-A8C1-ED4BD36B80F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3B20C5-4FFC-47C3-A8C1-ED4BD36B80F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3B20C5-4FFC-47C3-A8C1-ED4BD36B80F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3B20C5-4FFC-47C3-A8C1-ED4BD36B80F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C68A942-9EF3-4536-AA4D-8068E88A5705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C68A942-9EF3-4536-AA4D-8068E88A5705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C68A942-9EF3-4536-AA4D-8068E88A5705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C68A942-9EF3-4536-AA4D-8068E88A5705}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0A7ACD2-D801-4C81-B747-9FDDF42FB7B4}
+	EndGlobalSection
+EndGlobal
