@@ -1,15 +1,7 @@
-﻿
-namespace WorkoutJournal.Data.Data.Models;
+﻿namespace WorkoutJournal.Data.Data.Models;
 
 public class ExerciseSet
 {
-    public int Reps { get; set; }
+    public string Amount { get; set; }
     public decimal Weight { get; set; }
-    public WeightUnit WeightUnit { get; set; }
-}
-
-public enum WeightUnit
-{
-    KG,
-    LBS
 }
