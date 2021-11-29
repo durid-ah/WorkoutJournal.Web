@@ -19,11 +19,13 @@ public class ExerciseTemplateConfig : IEntityTypeConfiguration<ExerciseTemplate>
             .HasMaxLength(250);
 
         builder.Property(et => et.WeightUnit)
-                .HasConversion(
-                    wu => wu.ToString(),
-                    wus => (WeightUnit)Enum.Parse(typeof(WeightUnit), wus));
+            .HasMaxLength(3)
+            .HasConversion(
+                wu => wu.ToString(),
+                wus => (WeightUnit)Enum.Parse(typeof(WeightUnit), wus));
 
         builder.Property(et => et.RepType)
+        .HasMaxLength(10)
         .HasConversion(
             rt => rt.ToString(),
             rts => (RepType)Enum.Parse(typeof(RepType), rts));
