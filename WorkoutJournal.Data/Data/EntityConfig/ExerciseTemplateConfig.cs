@@ -32,7 +32,8 @@ public class ExerciseTemplateConfig : IEntityTypeConfiguration<ExerciseTemplate>
 
         builder.HasOne(et => et.WorkoutTemplate)
             .WithMany(wt => wt.Exercises)
-            .HasForeignKey(et => et.WorkoutTemplateId);
+            .HasForeignKey(et => et.WorkoutTemplateId)
+            .OnDelete(DeleteBehavior.Cascade);
 
     }
 }
