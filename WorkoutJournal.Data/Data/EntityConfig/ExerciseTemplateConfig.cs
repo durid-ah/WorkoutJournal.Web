@@ -8,6 +8,8 @@ public class ExerciseTemplateConfig : IEntityTypeConfiguration<ExerciseTemplate>
 {
     public void Configure(EntityTypeBuilder<ExerciseTemplate> builder)
     {
+        builder.HasKey(et => et.ExerciseTemplateId);
+
         builder
             .Property(et => et.Name)
             .IsRequired()

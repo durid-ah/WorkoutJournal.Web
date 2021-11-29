@@ -2,7 +2,7 @@
 
 public class ExerciseTemplate
 {
-    public int ExerciseId { get; set; }
+    public int ExerciseTemplateId { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public WeightUnit WeightUnit { get; set; }
