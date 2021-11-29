@@ -29,5 +29,10 @@ public class ExerciseTemplateConfig : IEntityTypeConfiguration<ExerciseTemplate>
         builder
             .Property(x => x.TargetSets)
             .HasJsonConversion();
+
+        builder.HasOne(et => et.WorkoutTemplate)
+            .WithMany(wt => wt.Exercises)
+            .HasForeignKey(et => et.WorkoutTemplateId);
+
     }
 }
