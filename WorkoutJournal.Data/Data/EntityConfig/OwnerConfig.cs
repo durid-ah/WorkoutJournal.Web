@@ -13,7 +13,17 @@ namespace WorkoutJournal.Data.Data.EntityConfig
     {
         public void Configure(EntityTypeBuilder<Owner> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.Property(o => o.FirstName)
+                .IsRequired()
+                .HasMaxLength(500)
+                .IsUnicode(false);
+
+            builder.Property(o => o.FirstName)
+                .IsRequired()
+                .HasMaxLength(500)
+                .IsUnicode(false);
+
         }
     }
 }
