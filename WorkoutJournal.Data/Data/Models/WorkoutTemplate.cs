@@ -6,6 +6,7 @@ public class WorkoutTemplate
 {
     [Key]
     public Guid WorkoutTemplateId { get; set; }
+    public int OwnerId { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public DateTime LastUpdated { get; set; }
