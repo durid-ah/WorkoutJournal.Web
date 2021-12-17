@@ -8,7 +8,7 @@ public class WorkoutTemplateConfig : IEntityTypeConfiguration<WorkoutTemplate>
 {
     public void Configure(EntityTypeBuilder<WorkoutTemplate> builder)
     {
-        builder.Property(wt => wt.WorkoutTemplateId)
+        builder.Property(wt => wt.Id)
             .ValueGeneratedNever();
 
         builder.Property(wt => wt.Name)
