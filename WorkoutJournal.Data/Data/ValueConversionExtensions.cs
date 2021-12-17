@@ -18,7 +18,7 @@ public static class ValueConversionExtensions
         ValueComparer<T> comparer = new (
             (l, r) => JsonConvert.SerializeObject(l) == JsonConvert.SerializeObject(r),
             v => v == null ? 0 : JsonConvert.SerializeObject(v).GetHashCode(),
-            v => JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(v))
+            v => JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(v)) ?? new T()
         );
 
         propertyBuilder.HasConversion(converter);
