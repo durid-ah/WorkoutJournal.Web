@@ -1,10 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WorkoutJournal.Data.Data;
 using WorkoutJournal.Data.Data.Models;
 
@@ -74,6 +69,20 @@ public class WorkoutTemplateRepo
         return Result.Success(template);
     }
 
+    public async Task<Result> DeleteUserTemplates(List<Guid> workoutIds)
+    {
+        var toDelete = await context
+            .WorkoutTemplates
+            .Where(wt => workoutIds.Contains(wt.Id))
+            .ToListAsync();
+
+        if (toDelete == null)
+            return Result.Failure(NOT_FOUND_ERROR);
+
+        context.WorkoutTemplates.RemoveRange(toDelete);
+        await context.SaveChangesAsync();
+        return Result.Success();
+    }
 
 }
 
