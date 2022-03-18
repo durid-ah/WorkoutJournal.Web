@@ -84,5 +84,34 @@ public class WorkoutTemplateRepo
         return Result.Success();
     }
 
+    public  async Task<Result<WorkoutTemplate>> UpdateUserTemplate(WorkoutTemplate template, int ownerId)
+    {
+        var toUpdate = await context.WorkoutTemplates
+            .FirstOrDefaultAsync(
+                wt => wt.Id == template.Id && wt.OwnerId == ownerId);
+
+        if (toUpdate == null)
+            return Result.Failure<WorkoutTemplate>(NOT_FOUND_ERROR);
+
+        toUpdate.UpdateTemplate(template.Name, template.Description);
+        
+        await context.SaveChangesAsync();
+        return Result.Success(toUpdate);
+    }
+
+    public async Task<Result<WorkoutTemplate>> UpdateUserTemplates(List<WorkoutTemplate> template, int ownerId)
+    {
+        //var toUpdate = await context.WorkoutTemplates
+        //    .FirstOrDefaultAsync(
+        //        wt => wt.Id == template.Id && wt.OwnerId == ownerId);
+
+        //if (toUpdate == null)
+        //    return Result.Failure<WorkoutTemplate>(NOT_FOUND_ERROR);
+
+        //toUpdate.UpdateTemplate(template.Name, template.Description);
+
+        await context.SaveChangesAsync();
+        return null;// Result.Success(toUpdate);
+    }
 }
 

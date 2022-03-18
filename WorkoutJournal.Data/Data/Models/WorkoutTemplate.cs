@@ -11,5 +11,12 @@ public class WorkoutTemplate
     public string Description { get; set; }
     public DateTime LastUpdated { get; set; }
     public ICollection<ExerciseTemplate> Exercises { get; set; }
+
+    public void UpdateTemplate(string Name, string Description)
+    {
+        this.Name = Name;
+        this.Description = Description;
+        LastUpdated = DateTime.Now; 
+    }
 }
 
