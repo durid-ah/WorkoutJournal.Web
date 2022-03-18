@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WorkoutJournal.Data.Data;
-using WorkoutJournal.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services
-    .AddDefaultIdentity<IdentityUser>(
-        options => options.SignIn.RequireConfirmedAccount = true)
+    .AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddRazorPages();
 
