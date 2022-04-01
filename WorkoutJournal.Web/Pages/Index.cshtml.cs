@@ -21,19 +21,19 @@ namespace WorkoutJournal.Web.Pages
             Templates = new List<WorkoutTemplateDto>
             {
                 new WorkoutTemplateDto 
-                { 
-                    Id = Guid.NewGuid(), 
-                    Name = "Test Workout", 
-                    Description = "Just a test template",
-                    LastUpdated = DateTime.Now,
-                },
+                (
+                    Guid.NewGuid(), 
+                    "Test Workout", 
+                    "Just a test template",
+                    DateTime.Now
+                ),
                 new WorkoutTemplateDto
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Test Workout 2",
-                    Description = "Just a test template",
-                    LastUpdated = DateTime.Now,
-                }
+                (
+                    Guid.NewGuid(),
+                    "Test Workout 2",
+                    "Just a test template",
+                    DateTime.Now
+                )
             };
 
             return Page();
