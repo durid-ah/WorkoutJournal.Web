@@ -2,41 +2,40 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WorkoutJournal.Web.Dtos;
 
-namespace WorkoutJournal.Web.Pages
+namespace WorkoutJournal.Web.Pages;
+
+public class IndexModel : PageModel
 {
-    public class IndexModel : PageModel
+    private readonly ILogger<IndexModel> _logger;
+
+    [BindProperty]
+    public List<WorkoutTemplateDto> Templates { get; set; }
+
+    public IndexModel(ILogger<IndexModel> logger)
     {
-        private readonly ILogger<IndexModel> _logger;
+        _logger = logger;
+    }
 
-        [BindProperty]
-        public List<WorkoutTemplateDto> Templates { get; set; }
-
-        public IndexModel(ILogger<IndexModel> logger)
+    public async Task<IActionResult> OnGet()
+    {
+        Templates = new List<WorkoutTemplateDto>
         {
-            _logger = logger;
-        }
+            new WorkoutTemplateDto 
+            (
+                Guid.NewGuid(), 
+                "Test Workout", 
+                "Just a test template",
+                DateTime.Now
+            ),
+            new WorkoutTemplateDto
+            (
+                Guid.NewGuid(),
+                "Test Workout 2",
+                "Just a test template",
+                DateTime.Now
+            )
+        };
 
-        public async Task<IActionResult> OnGet()
-        {
-            Templates = new List<WorkoutTemplateDto>
-            {
-                new WorkoutTemplateDto 
-                (
-                    Guid.NewGuid(), 
-                    "Test Workout", 
-                    "Just a test template",
-                    DateTime.Now
-                ),
-                new WorkoutTemplateDto
-                (
-                    Guid.NewGuid(),
-                    "Test Workout 2",
-                    "Just a test template",
-                    DateTime.Now
-                )
-            };
-
-            return Page();
-        }
+        return Page();
     }
 }
