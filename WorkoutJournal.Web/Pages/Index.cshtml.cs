@@ -18,6 +18,8 @@ public class IndexModel : PageModel
 
     public async Task<IActionResult> OnGet()
     {
+        await Task.FromResult(0);
+
         Templates = new List<WorkoutTemplateDto>
         {
             new WorkoutTemplateDto 

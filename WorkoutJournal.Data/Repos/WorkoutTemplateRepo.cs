@@ -99,7 +99,7 @@ public class WorkoutTemplateRepo
         return Result.Success(toUpdate);
     }
 
-    public async Task<Result<WorkoutTemplate>> UpdateUserTemplates(List<WorkoutTemplate> template, int ownerId)
+    public async Task<Result<WorkoutTemplate?>> UpdateUserTemplates(List<WorkoutTemplate> template, int ownerId)
     {
         //var toUpdate = await context.WorkoutTemplates
         //    .FirstOrDefaultAsync(

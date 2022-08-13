@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutJournal.Web", "WorkoutJournal.Web\WorkoutJournal.Web.csproj", "{25DCC534-D64F-4FE6-A8AC-D78B26229699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutJournal.Web", "WorkoutJournal.Web\WorkoutJournal.Web.csproj", "{25DCC534-D64F-4FE6-A8AC-D78B26229699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seeder", "Seeder\Seeder.csproj", "{B7CE2912-C8DF-499F-BE37-233757219451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{25DCC534-D64F-4FE6-A8AC-D78B26229699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25DCC534-D64F-4FE6-A8AC-D78B26229699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25DCC534-D64F-4FE6-A8AC-D78B26229699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CE2912-C8DF-499F-BE37-233757219451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CE2912-C8DF-499F-BE37-233757219451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CE2912-C8DF-499F-BE37-233757219451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CE2912-C8DF-499F-BE37-233757219451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
