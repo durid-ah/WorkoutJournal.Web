@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutJournal.Web", "Worko
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seeder", "Seeder\Seeder.csproj", "{B7CE2912-C8DF-499F-BE37-233757219451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestIdentity", "TestIdentity\TestIdentity.csproj", "{AAE9448A-AF1F-495D-B7DD-3FF70C060048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{B7CE2912-C8DF-499F-BE37-233757219451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CE2912-C8DF-499F-BE37-233757219451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CE2912-C8DF-499F-BE37-233757219451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE9448A-AF1F-495D-B7DD-3FF70C060048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE9448A-AF1F-495D-B7DD-3FF70C060048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE9448A-AF1F-495D-B7DD-3FF70C060048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE9448A-AF1F-495D-B7DD-3FF70C060048}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
