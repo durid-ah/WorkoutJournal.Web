@@ -1,3 +1,4 @@
+using ContactManager.Authorization;
 using ContactManager.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -25,14 +26,25 @@ builder.Services.AddAuthorization(options =>
         .Build();
 });
 
+// Authorization handlers.
+builder.Services.AddScoped<IAuthorizationHandler, ContactIsOwnerAuthorizationHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, ContactAdministratorsAuthorizationHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, ContactManagerAuthorizationHandler>();
 
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    context.Database.Migrate();
+    // requires using Microsoft.Extensions.Configuration;
+    // Set password with the Secret Manager tool.
+    // dotnet user-secrets set SeedUserPW <pw>
 
-    await SeedData.Initialize(services);
+    var testUserPw = builder.Configuration.GetValue<string>("SeedUserPW");
+
+    await SeedData.Initialize(services, testUserPw);
 }
 
 // Configure the HTTP request pipeline.
